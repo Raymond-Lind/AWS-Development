@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>XSS Form</title>
+  <style>
+    .center {
+      text-align: center
+    }
+    .background {
+      width: 950px;
+      height: 750px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    body {
+      background-color: #C0C0C0;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="center">Do not perform XSS on this form please!</h1>
+  <h3 class="center">Submit your info below...</h3> 
+  <div class="center">
+    <form action="/php/show.php" method="post">
+      <input type="text" name="user" value="">
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
